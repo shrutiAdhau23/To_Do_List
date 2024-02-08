@@ -1,0 +1,117 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial Black;
+    font-size: 15px;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    background-image:url("bg.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    
+}
+.todo_app{
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    margin-top: 150px;
+    padding: 30px;
+    border-radius: 50px;
+    position: relative;
+    
+}
+
+.todo_app h1{
+    color: black;
+    font-size: 35px;
+    margin-left: 70px;
+}
+.todo-icon{
+    position: absolute;
+    height: 50px;
+    top: 20px;
+    /* left: 200px; */
+    right: 30px;
+}
+.feilds{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(228,221,221);
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    border-radius: 20px;
+    position: relative;
+}
+.feilds input{
+    width: 70%;
+    height: 40px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 15;
+}
+
+.btn{
+    width: 40px;
+    font-size: 13px;
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: none;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: black;
+    cursor: pointer;
+}
+
+.task-list{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.task-list li{
+    padding: 20px 20px 2px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    position: relative;
+}
+.task-list li::before{
+    content: "";
+    background-image:url("unchecked.png");
+    height: 18px;
+    width: 18px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    position: absolute;
+    left: -6px;
+    top: 18px;
+}
+.task-list li.checked{
+    color: grey;
+    text-decoration: line-through;
+}
+.task-list li.checked::before{
+    background-image: url("checkedCircle.png");
+    height: 20px;
+    width: 20px;
+}
+span{
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+}
